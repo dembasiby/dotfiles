@@ -3,9 +3,8 @@
 set -euo pipefail
 
 if ! command -v chezmoi >/dev/null; then
-    sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply git@github.com:dembasiby/dotfiles.git
+    sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply dembasiby 
 fi
-
 echo "set -o vi" >> ~/.bashrc
 
 exit 0
